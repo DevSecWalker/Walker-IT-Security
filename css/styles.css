@@ -186,7 +186,7 @@ body {
 @keyframes clipInLeft {
   from {
     opacity: 0;
-    clip-path: inset(100% 100% 0 0);
+    clip-path: inset(0 100% 100% 0);
   }
   to {
     opacity: 1;

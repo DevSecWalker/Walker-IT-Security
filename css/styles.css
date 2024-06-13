@@ -104,6 +104,110 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+/*.animate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.animate.animate--infinite {
+  animation-iteration-count: infinite;
+}
+.animate.animate--delay-1s {
+  animation-duration: 1s;
+}
+.animate.animate--fast {
+  animation-duration: 0.6s;
+}
+.animate.animate--slow {
+  animation-duration: 3s;
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.slideInLeft {
+  animation: slideInLeft 1s ease-in;
+}*/
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.animate {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.slideR {
+  animation: slideInRight linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.slideL {
+  animation: slideInLeft linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
+}
+
+@keyframes clipInLeft {
+  from {
+    opacity: 0;
+    clip-path: inset(100% 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.clipL {
+  animation: clipInLeft linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
+}
+
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  border: 0;
+  border-top: 1px solid;
+  opacity: 0.25;
+}
+
 hr {
   margin: 1rem 0;
   color: inherit;
